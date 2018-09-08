@@ -7,7 +7,7 @@ export class Header extends React.Component {
         return (
             <div className={"wrapper-header"}>
                 <div className={"wrapper-header-title"}>
-                    {"вовчок.123"}
+                    {"вовчок."}
                 </div>
                 <div className={"wrapper-header-menu"}>
                     <Link to={"/articles"}>

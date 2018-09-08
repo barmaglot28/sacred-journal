@@ -1,21 +1,38 @@
 import React from "react";
 import {connect} from "react-redux";
-import PropTypes from "prop-types";
+
+import {createArticle, selectArticle} from "../ducks/article";
+import {ArticleForm} from "../components/article/ArticleForm";
 
 class ArticlePage extends React.Component {
     render() {
-        return (<div>
-            тут сторінка для роботи зі статтями.
-        </div>);
+        const {
+            article,
+
+            createArticle,
+            selectArticle,
+        } = this.props;
+
+        return (
+            <React.Fragment>
+                <ArticleForm
+                    article={article}
+
+                    onCreateArticle={createArticle}
+                    onSelectArticle={selectArticle}
+                />
+            </React.Fragment>
+        );
     }
 }
 
 const mapState2props = state => ({
-
+    article: state.article,
 });
 
-const mapDispatch2props = dispatch => ({
-
-});
+const mapDispatch2props = {
+    createArticle,
+    selectArticle,
+};
 
 export default connect(mapState2props, mapDispatch2props)(ArticlePage);

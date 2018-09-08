@@ -1,0 +1,27 @@
+.wrapper-button {
+  min-height: 20px;
+  min-width: 40px;
+  width: 120px;
+  cursor: pointer;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  font-size: 20px;
+  color: black;
+  -moz-user-select: none;
+  user-select: none;
+
+  &:hover {
+    text-decoration: line-through;
+  }
+}
+
+.wrapper-button-disabled {
+  color: #999999;
+  cursor: default;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

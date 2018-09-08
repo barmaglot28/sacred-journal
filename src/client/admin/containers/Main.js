@@ -12,7 +12,7 @@ class Main extends React.Component {
         const {router} = this.props;
 
         return (
-            <div>
+            <React.Fragment>
                 <Header router={router}/>
                 <Switch>
                     <Route path={"/articles"} component={ArticlePage}/>
@@ -21,7 +21,7 @@ class Main extends React.Component {
 
                     <Route component={ArticlePage}/>
                 </Switch>
-            </div>
+            </React.Fragment>
         )
     }
 }

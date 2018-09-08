@@ -3,6 +3,10 @@ html {
   font-family: 'Comic Nefors', monospace;
 }
 
+body {
+  height: 100vh;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -53,4 +57,65 @@ html {
 
 .wrapper-header .wrapper-header-menu a:active {
   color: blanchedalmond;
+}.wrapper-article-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 100vw;
+  height: 88vh;
+  background-color: whitesmoke;
+}
+
+.test {
+  background-color: whitesmoke;
+  width: 100%;
+  height: 100%;
+}.wrapper-article-action-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  background-color: whitesmoke;
+  margin-left: 20px;
+}.wrapper-button {
+  min-height: 20px;
+  min-width: 40px;
+  width: 120px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: black;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.wrapper-button:hover {
+  text-decoration: line-through;
+}
+
+.wrapper-button-disabled {
+  color: #999999;
+  cursor: default;
+}
+
+.wrapper-button-disabled:hover {
+  text-decoration: none;
+}.wrapper-article-list {
+  background-color: whitesmoke;
+  width: 100%;
+  height: 100%;
+  margin: 20px;
+}.wrapper-article {
+  display: flex;
+  flex-direction: row;
+  background-color: #cccccc;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.wrapper-article-checkbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 30px;
 }
