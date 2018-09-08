@@ -1,0 +1,63 @@
+{
+  "name": "sacred-journal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -w",
+    "copy": "ncp ./resources ./build",
+    "dc:start": "nodemon ./src/server/index.js -w",
+    "dc:install": "docker-compose run journal",
+    "start": "concurrently --kill-others \"webpack -w\" \"node ./src/server/index.js\""
+  },
+  "author": "m.lozinsky",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^4.0.1",
+    "connect-mongo": "^2.0.1",
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-favicon": "^2.0.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.1.4",
+    "mongoose": "^5.2.12",
+    "ncp": "^2.0.0",
+    "nodemon": "^1.18.4",
+    "prop-types": "^15.6.2",
+    "pug": "^2.0.3",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.1.5",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "extract-style-webpack-plugin": "^0.1.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^2.0.0",
+    "node-sass": "^4.9.3",
+    "raw-loader": "^0.5.1",
+    "resolve-url-loader": "^2.3.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-livereload-plugin": "^2.1.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/react"
+    ]
+  }
+}

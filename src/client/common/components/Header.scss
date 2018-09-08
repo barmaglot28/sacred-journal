@@ -1,0 +1,30 @@
+.wrapper-header {
+  height: 110px;
+  width: 100%;
+  background-color: black;
+  font-size: 35px;
+  padding-right: 30px;
+  padding-top: 15px;
+  .wrapper-header-title {
+    text-align: right;
+    color: whitesmoke;
+  }
+  .wrapper-header-menu {
+    padding: 20px 70px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+      font-size: 25px;
+      margin: 0 30px 0;
+      &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+        color: #999999;
+      }
+      &:active {
+        color: blanchedalmond;
+      }
+    }
+  }
+}

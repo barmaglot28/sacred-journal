@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Comic Nefors';
+    src: url('ComicNefors-SemiBold.eot');
+    src: url('ComicNefors-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('ComicNefors-SemiBold.woff2') format('woff2'),
+        url('ComicNefors-SemiBold.woff') format('woff'),
+        url('ComicNefors-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
