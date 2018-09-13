@@ -4,7 +4,7 @@ const ConsoleWriter = require("./writer/ConsoleWriter");
 const MongoWriter = require("./writer/MongoWriter");
 const LoggerUtil = require("./LoggerUtil")().getUtil();
 
-const Logger = function (filename) {
+export const Logger = function (filename) {
     this.filename = filename.substr(LoggerUtil.rootLength);
     this.writers = [];
 
@@ -59,4 +59,4 @@ const Logger = function (filename) {
             writer.error(reqId, this.filename, method, message, LoggerUtil.stringify(objects));
         }
     }
-}
+};

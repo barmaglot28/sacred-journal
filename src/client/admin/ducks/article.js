@@ -3,6 +3,12 @@ import {getFetchInitProps} from "../../common/util/request";
 const SELECT_ARTICLE = "SELECT_ARTICLE";
 const CREATE_ARTICLE = "CREATE_ARTICLE";
 
+const CHANGE_TITLE = "CHANGE_TITLE";
+const SAVE_TITLE = "SAVE_TITLE";
+
+const CHANGE_TEXT = "CHANGE_TEXT";
+const SAVE_TEXT = "SAVE_TEXT";
+
 const SAVE_ARTICLE_SEND = "SAVE_ARTICLE_SEND";
 const SAVE_ARTICLE_SUCCESS = "SAVE_ARTICLE_SUCCESS";
 const SAVE_ARTICLE_FAILED = "SAVE_ARTICLE_FAILED";
@@ -20,12 +26,36 @@ const newArticle = articles => ({
 
     id: `-${articles.length}`,
     title: "Щось новеньке, що додав наш чудовий автор",
+    editedTitle: "Щось новеньке, що додав наш чудовий автор",
     text: "Тут бере свій початок нова стаття, тут бере свій початок світло",
+    editedText: "Тут бере свій початок нова стаття, тут бере свій початок світло",
     author: null,
 });
 
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
+        case CHANGE_TITLE:
+            return ({
+                ...state,
+                articles: state.articles.map(i => i.id === action.id ? {...i, editedTitle: action.title} : i),
+            });
+        case SAVE_TITLE:
+            return ({
+                ...state,
+                articles: state.articles.map(i => i.id === action.id ? {...i, title: i.editedTitle} : i),
+            });
+
+        case CHANGE_TEXT:
+            return ({
+                ...state,
+                articles: state.articles.map(i => i.id === action.id ? {...i, editedText: action.text} : i),
+            });
+        case SAVE_TEXT:
+            return ({
+                ...state,
+                articles: state.articles.map(i => i.id === action.id ? {...i, text: i.editedText} : i),
+            });
+
         case CREATE_ARTICLE:
             return ({
                 ...state,
@@ -45,6 +75,28 @@ export const reducer = (state = initialState, action) => {
             return state;
     }
 };
+
+export const saveTitle = id => ({
+    type: SAVE_TITLE,
+    id,
+});
+
+export const saveText = id => ({
+    type: SAVE_TEXT,
+    id,
+});
+
+export const changeTitle = (title, id) => ({
+    type: CHANGE_TITLE,
+    title,
+    id,
+});
+
+export const changeText = (text, id) => ({
+    type: CHANGE_TEXT,
+    text,
+    id,
+});
 
 export const selectArticle = id => ({
     type: SELECT_ARTICLE,

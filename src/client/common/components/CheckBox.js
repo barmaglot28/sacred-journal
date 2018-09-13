@@ -6,15 +6,15 @@ import PropTypes from "prop-types";
 export class CheckBox extends React.Component {
     render() {
         return (
-            <div className={"wrapper-checkbox"}>
-                <input type="checkbox" onChange={this.onClick}/>
+            <div className={"wrapper-checkbox"} onClick={this.onClick}>
+                {this.props.checked ? "X" : ""}
             </div>
         )
     }
 
-    onClick = () => {
+    onClick = e => {
         if (this.props.onClick) {
-            this.props.onClick();
+            this.props.onClick(e);
         }
     }
 }

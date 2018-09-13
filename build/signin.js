@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/client/admin/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/client/signin/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1067,18 +1067,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var path
 
 /***/ }),
 
-/***/ "./node_modules/react-router/es/index.js":
-/*!***********************************************!*\
-  !*** ./node_modules/react-router/es/index.js ***!
-  \***********************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _MemoryRouter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MemoryRouter */ \"./node_modules/react-router/es/MemoryRouter.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MemoryRouter\", function() { return _MemoryRouter__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n/* harmony import */ var _Prompt__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Prompt */ \"./node_modules/react-router/es/Prompt.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Prompt\", function() { return _Prompt__WEBPACK_IMPORTED_MODULE_1__[\"default\"]; });\n\n/* harmony import */ var _Redirect__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Redirect */ \"./node_modules/react-router/es/Redirect.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Redirect\", function() { return _Redirect__WEBPACK_IMPORTED_MODULE_2__[\"default\"]; });\n\n/* harmony import */ var _Route__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Route */ \"./node_modules/react-router/es/Route.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Route\", function() { return _Route__WEBPACK_IMPORTED_MODULE_3__[\"default\"]; });\n\n/* harmony import */ var _Router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Router */ \"./node_modules/react-router/es/Router.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Router\", function() { return _Router__WEBPACK_IMPORTED_MODULE_4__[\"default\"]; });\n\n/* harmony import */ var _StaticRouter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./StaticRouter */ \"./node_modules/react-router/es/StaticRouter.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"StaticRouter\", function() { return _StaticRouter__WEBPACK_IMPORTED_MODULE_5__[\"default\"]; });\n\n/* harmony import */ var _Switch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Switch */ \"./node_modules/react-router/es/Switch.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Switch\", function() { return _Switch__WEBPACK_IMPORTED_MODULE_6__[\"default\"]; });\n\n/* harmony import */ var _generatePath__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./generatePath */ \"./node_modules/react-router/es/generatePath.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"generatePath\", function() { return _generatePath__WEBPACK_IMPORTED_MODULE_7__[\"default\"]; });\n\n/* harmony import */ var _matchPath__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./matchPath */ \"./node_modules/react-router/es/matchPath.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"matchPath\", function() { return _matchPath__WEBPACK_IMPORTED_MODULE_8__[\"default\"]; });\n\n/* harmony import */ var _withRouter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./withRouter */ \"./node_modules/react-router/es/withRouter.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"withRouter\", function() { return _withRouter__WEBPACK_IMPORTED_MODULE_9__[\"default\"]; });\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./node_modules/react-router/es/index.js?");
-
-/***/ }),
-
 /***/ "./node_modules/react-router/es/matchPath.js":
 /*!***************************************************!*\
   !*** ./node_modules/react-router/es/matchPath.js ***!
@@ -1244,239 +1232,6 @@ eval("module.exports = function(originalModule) {\n\tif (!originalModule.webpack
 
 /***/ }),
 
-/***/ "./src/client/admin/components/article/Article.js":
-/*!********************************************************!*\
-  !*** ./src/client/admin/components/article/Article.js ***!
-  \********************************************************/
-/*! exports provided: Article */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Article\", function() { return Article; });\n/* harmony import */ var _Article_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Article.scss */ \"./src/client/admin/components/article/Article.scss\");\n/* harmony import */ var _Article_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Article_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _common_components_CheckBox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../common/components/CheckBox */ \"./src/client/common/components/CheckBox.js\");\n/* harmony import */ var _common_components_Input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../common/components/Input */ \"./src/client/common/components/Input.js\");\n/* harmony import */ var _common_components_Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../common/components/Button */ \"./src/client/common/components/Button.js\");\n/* harmony import */ var _ArticleHeader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ArticleHeader */ \"./src/client/admin/components/article/ArticleHeader.js\");\n/* harmony import */ var _ArticleBody__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ArticleBody */ \"./src/client/admin/components/article/ArticleBody.js\");\n/* harmony import */ var _ArticleFooter__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ArticleFooter */ \"./src/client/admin/components/article/ArticleFooter.js\");\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\n\n\n\n\n\n\n\nclass Article extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {\n  constructor(props) {\n    super(props);\n\n    _defineProperty(this, \"onHeaderClick\", () => {\n      this.setState(_objectSpread({}, this.state, {\n        expanded: !this.state.expanded\n      }));\n    });\n\n    this.state = {\n      expanded: false,\n      firstVer: {\n        title: props.title,\n        text: props.text\n      }\n    };\n  }\n\n  render() {\n    const {\n      selected,\n      id,\n      text,\n      title,\n      editedTitle,\n      editedText,\n      onSaveText,\n      onChangeText,\n      onSaveTitle,\n      onChangeTitle,\n      onSelectArticle\n    } = this.props;\n    const {\n      expanded\n    } = this.state;\n    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\"div\", {\n      className: \"wrapper-article\"\n    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ArticleHeader__WEBPACK_IMPORTED_MODULE_6__[\"ArticleHeader\"], {\n      id: id,\n      title: title,\n      selected: selected,\n      editedTitle: editedTitle,\n      onSaveTitle: onSaveTitle,\n      onChangeTitle: onChangeTitle,\n      onSelectArticle: onSelectArticle,\n      onHeaderClick: this.onHeaderClick\n    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ArticleBody__WEBPACK_IMPORTED_MODULE_7__[\"ArticleBody\"], {\n      text: text,\n      editedText: editedText,\n      expanded: expanded,\n      onSaveText: onSaveText,\n      onChangeText: onChangeText\n    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ArticleFooter__WEBPACK_IMPORTED_MODULE_8__[\"ArticleFooter\"], {\n      selected: selected\n    }));\n  }\n\n}\nArticle.propTypes = {\n  selected: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool.isRequired,\n  id: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,\n  title: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,\n  editedTitle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,\n  text: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,\n  editedText: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,\n  onChangeText: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,\n  onSaveText: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,\n  onChangeTitle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,\n  onSaveTitle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,\n  onSelectArticle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired\n};\n\n//# sourceURL=webpack:///./src/client/admin/components/article/Article.js?");
-
-/***/ }),
-
-/***/ "./src/client/admin/components/article/Article.scss":
-/*!**********************************************************!*\
-  !*** ./src/client/admin/components/article/Article.scss ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/client/admin/components/article/Article.scss?");
-
-/***/ }),
-
-/***/ "./src/client/admin/components/article/ArticleActionMenu.js":
-/*!******************************************************************!*\
-  !*** ./src/client/admin/components/article/ArticleActionMenu.js ***!
-  \******************************************************************/
-/*! exports provided: ArticleActionMenu */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ArticleActionMenu\", function() { return ArticleActionMenu; });\n/* harmony import */ var _ArticleActionMenu_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ArticleActionMenu.scss */ \"./src/client/admin/components/article/ArticleActionMenu.scss\");\n/* harmony import */ var _ArticleActionMenu_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ArticleActionMenu_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _common_components_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../common/components/Button */ \"./src/client/common/components/Button.js\");\n\n\n\n\nclass ArticleActionMenu extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {\n  render() {\n    const {\n      articles,\n      onCreateArticle\n    } = this.props;\n    const additionalButtonsDisabled = articles.length === 0 || articles.every(i => !i.selected);\n    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\"div\", {\n      className: \"wrapper-article-action-menu\"\n    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_common_components_Button__WEBPACK_IMPORTED_MODULE_3__[\"Button\"], {\n      label: \"Додати новеньке\",\n      onClick: onCreateArticle\n    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_common_components_Button__WEBPACK_IMPORTED_MODULE_3__[\"Button\"], {\n      disabled: additionalButtonsDisabled,\n      label: \"Зберегти\"\n    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_common_components_Button__WEBPACK_IMPORTED_MODULE_3__[\"Button\"], {\n      disabled: additionalButtonsDisabled,\n      label: \"Редагувати\"\n    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_common_components_Button__WEBPACK_IMPORTED_MODULE_3__[\"Button\"], {\n      disabled: additionalButtonsDisabled,\n      label: \"Видалити\"\n    }));\n  }\n\n}\nArticleActionMenu.propTypes = {\n  articles: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.array.isRequired,\n  onCreateArticle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired\n};\n\n//# sourceURL=webpack:///./src/client/admin/components/article/ArticleActionMenu.js?");
-
-/***/ }),
-
-/***/ "./src/client/admin/components/article/ArticleActionMenu.scss":
-/*!********************************************************************!*\
-  !*** ./src/client/admin/components/article/ArticleActionMenu.scss ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/client/admin/components/article/ArticleActionMenu.scss?");
-
-/***/ }),
-
-/***/ "./src/client/admin/components/article/ArticleBody.js":
-/*!************************************************************!*\
-  !*** ./src/client/admin/components/article/ArticleBody.js ***!
-  \************************************************************/
-/*! exports provided: ArticleBody */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ArticleBody\", function() { return ArticleBody; });\n/* harmony import */ var _ArticleBody_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ArticleBody.scss */ \"./src/client/admin/components/article/ArticleBody.scss\");\n/* harmony import */ var _ArticleBody_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ArticleBody_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _common_components_Input__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../common/components/Input */ \"./src/client/common/components/Input.js\");\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\n\n\nclass ArticleBody extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {\n  constructor(props) {\n    super(props);\n\n    _defineProperty(this, \"onTextClick\", e => {\n      if (!this.state.editText) {\n        e.stopPropagation();\n        this.setState(_objectSpread({}, this.state, {\n          editText: true\n        }));\n      }\n    });\n\n    this.state = {\n      editText: false\n    };\n  }\n\n  render() {\n    const {\n      text,\n      expanded,\n      editedText,\n      onChangeText\n    } = this.props;\n    const {\n      editText\n    } = this.state;\n    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\"div\", {\n      className: `wrapper-article-body ${expanded ? \"expanded\" : \"\"}`,\n      onClick: this.onTextClick\n    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\"div\", {\n      className: `wrapper-article-body-text ${expanded ? \"expanded-body-text\" : \"\"}`\n    }, editText ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_common_components_Input__WEBPACK_IMPORTED_MODULE_3__[\"Input\"], {\n      autofocus: true,\n      value: editedText,\n      onChange: onChangeText\n    }) : text));\n  }\n\n}\nArticleBody.propTypes = {\n  text: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,\n  editedText: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,\n  expanded: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool.isRequired,\n  onSaveText: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,\n  onChangeText: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired\n};\n\n//# sourceURL=webpack:///./src/client/admin/components/article/ArticleBody.js?");
-
-/***/ }),
-
-/***/ "./src/client/admin/components/article/ArticleBody.scss":
-/*!**************************************************************!*\
-  !*** ./src/client/admin/components/article/ArticleBody.scss ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/client/admin/components/article/ArticleBody.scss?");
-
-/***/ }),
-
-/***/ "./src/client/admin/components/article/ArticleFooter.js":
-/*!**************************************************************!*\
-  !*** ./src/client/admin/components/article/ArticleFooter.js ***!
-  \**************************************************************/
-/*! exports provided: ArticleFooter */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ArticleFooter\", function() { return ArticleFooter; });\n/* harmony import */ var _ArticleFooter_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ArticleFooter.scss */ \"./src/client/admin/components/article/ArticleFooter.scss\");\n/* harmony import */ var _ArticleFooter_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ArticleFooter_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _common_components_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../common/components/Button */ \"./src/client/common/components/Button.js\");\n\n\n\n\nclass ArticleFooter extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {\n  render() {\n    const {\n      selected\n    } = this.props;\n    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\"div\", {\n      className: `wrapper-article-footer ${selected ? \"selected\" : \"\"}`\n    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_common_components_Button__WEBPACK_IMPORTED_MODULE_3__[\"Button\"], {\n      label: \"Зберегти\"\n    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_common_components_Button__WEBPACK_IMPORTED_MODULE_3__[\"Button\"], {\n      label: \"Видалити\"\n    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_common_components_Button__WEBPACK_IMPORTED_MODULE_3__[\"Button\"], {\n      label: \"Відкатити зміни\"\n    }));\n  }\n\n}\nArticleFooter.propTypes = {\n  selected: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool.isRequired\n};\n\n//# sourceURL=webpack:///./src/client/admin/components/article/ArticleFooter.js?");
-
-/***/ }),
-
-/***/ "./src/client/admin/components/article/ArticleFooter.scss":
-/*!****************************************************************!*\
-  !*** ./src/client/admin/components/article/ArticleFooter.scss ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/client/admin/components/article/ArticleFooter.scss?");
-
-/***/ }),
-
-/***/ "./src/client/admin/components/article/ArticleForm.js":
-/*!************************************************************!*\
-  !*** ./src/client/admin/components/article/ArticleForm.js ***!
-  \************************************************************/
-/*! exports provided: ArticleForm */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ArticleForm\", function() { return ArticleForm; });\n/* harmony import */ var _ArticleForm_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ArticleForm.scss */ \"./src/client/admin/components/article/ArticleForm.scss\");\n/* harmony import */ var _ArticleForm_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ArticleForm_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _ArticleActionMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ArticleActionMenu */ \"./src/client/admin/components/article/ArticleActionMenu.js\");\n/* harmony import */ var _ArticleList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ArticleList */ \"./src/client/admin/components/article/ArticleList.js\");\n\n\n\n\n\nclass ArticleForm extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {\n  render() {\n    const {\n      article,\n      onSaveText,\n      onSaveTitle,\n      onChangeText,\n      onChangeTitle,\n      onCreateArticle,\n      onSelectArticle\n    } = this.props;\n    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\"div\", {\n      className: \"wrapper-article-form\"\n    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ArticleActionMenu__WEBPACK_IMPORTED_MODULE_3__[\"ArticleActionMenu\"], {\n      articles: article.articles,\n      onCreateArticle: onCreateArticle\n    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ArticleList__WEBPACK_IMPORTED_MODULE_4__[\"ArticleList\"], {\n      articles: article.articles,\n      onSaveTitle: onSaveTitle,\n      onSaveText: onSaveText,\n      onChangeText: onChangeText,\n      onChangeTitle: onChangeTitle,\n      onSelectArticle: onSelectArticle\n    }));\n  }\n\n}\nArticleForm.propTypes = {\n  article: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object.isRequired,\n  onSaveText: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,\n  onSaveTitle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,\n  onChangeText: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,\n  onChangeTitle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,\n  onSelectArticle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,\n  onCreateArticle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired\n};\n\n//# sourceURL=webpack:///./src/client/admin/components/article/ArticleForm.js?");
-
-/***/ }),
-
-/***/ "./src/client/admin/components/article/ArticleForm.scss":
-/*!**************************************************************!*\
-  !*** ./src/client/admin/components/article/ArticleForm.scss ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/client/admin/components/article/ArticleForm.scss?");
-
-/***/ }),
-
-/***/ "./src/client/admin/components/article/ArticleHeader.js":
-/*!**************************************************************!*\
-  !*** ./src/client/admin/components/article/ArticleHeader.js ***!
-  \**************************************************************/
-/*! exports provided: ArticleHeader */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ArticleHeader\", function() { return ArticleHeader; });\n/* harmony import */ var _ArticleHeader_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ArticleHeader.scss */ \"./src/client/admin/components/article/ArticleHeader.scss\");\n/* harmony import */ var _ArticleHeader_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ArticleHeader_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _common_components_CheckBox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../common/components/CheckBox */ \"./src/client/common/components/CheckBox.js\");\n/* harmony import */ var _common_components_Input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../common/components/Input */ \"./src/client/common/components/Input.js\");\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\n\n\n\nclass ArticleHeader extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {\n  constructor(props) {\n    super(props);\n\n    _defineProperty(this, \"onSelect\", e => {\n      e.stopPropagation();\n      this.props.onSelectArticle(this.props.id);\n    });\n\n    _defineProperty(this, \"onTitleClick\", e => {\n      if (!this.state.editHeader) {\n        e.stopPropagation();\n        this.setState(_objectSpread({}, this.state, {\n          editHeader: true\n        }));\n      }\n    });\n\n    _defineProperty(this, \"onTitleKeyDown\", e => {\n      if (e.keyCode === 13) {\n        this.onSaveTitle();\n      }\n    });\n\n    _defineProperty(this, \"onTitleInputClick\", e => {\n      e.stopPropagation();\n    });\n\n    _defineProperty(this, \"onTitleChange\", value => {\n      const id = this.props.id;\n      this.props.onChangeTitle(value, id);\n    });\n\n    _defineProperty(this, \"onTitleBlur\", () => {\n      this.onSaveTitle();\n    });\n\n    _defineProperty(this, \"onSaveTitle\", () => {\n      if (this.props.editedTitle !== this.props.title) {\n        const id = this.props.id;\n        this.props.onSaveTitle(id);\n      }\n\n      this.setState(_objectSpread({}, this.state, {\n        editHeader: false\n      }));\n    });\n\n    this.state = {\n      editHeader: false\n    };\n  }\n\n  render() {\n    const {\n      title,\n      selected,\n      editedTitle,\n      onHeaderClick\n    } = this.props;\n    const {\n      editHeader\n    } = this.state;\n    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\"div\", {\n      className: `wrapper-article-header ${selected ? \"selected\" : \"\"}`,\n      onClick: onHeaderClick\n    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\"div\", {\n      className: \"wrapper-article-checkbox\"\n    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_common_components_CheckBox__WEBPACK_IMPORTED_MODULE_3__[\"CheckBox\"], {\n      checked: selected,\n      onClick: this.onSelect\n    })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\"div\", {\n      className: \"wrapper-article-title\",\n      onClick: this.onTitleClick\n    }, editHeader ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_common_components_Input__WEBPACK_IMPORTED_MODULE_4__[\"Input\"], {\n      autofocus: true,\n      value: editedTitle,\n      onBlur: this.onTitleBlur,\n      onChange: this.onTitleChange,\n      onKeyDown: this.onTitleKeyDown,\n      onClick: this.onTitleInputClick\n    }) : title));\n  }\n\n}\nArticleHeader.propTypes = {\n  id: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,\n  title: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,\n  editedTitle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,\n  selected: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool.isRequired,\n  onChangeTitle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,\n  onSaveTitle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,\n  onHeaderClick: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,\n  onSelectArticle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired\n};\n\n//# sourceURL=webpack:///./src/client/admin/components/article/ArticleHeader.js?");
-
-/***/ }),
-
-/***/ "./src/client/admin/components/article/ArticleHeader.scss":
-/*!****************************************************************!*\
-  !*** ./src/client/admin/components/article/ArticleHeader.scss ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/client/admin/components/article/ArticleHeader.scss?");
-
-/***/ }),
-
-/***/ "./src/client/admin/components/article/ArticleList.js":
-/*!************************************************************!*\
-  !*** ./src/client/admin/components/article/ArticleList.js ***!
-  \************************************************************/
-/*! exports provided: ArticleList */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ArticleList\", function() { return ArticleList; });\n/* harmony import */ var _ArticleList_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ArticleList.scss */ \"./src/client/admin/components/article/ArticleList.scss\");\n/* harmony import */ var _ArticleList_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ArticleList_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _Article__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Article */ \"./src/client/admin/components/article/Article.js\");\n\n\n\n\nclass ArticleList extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {\n  render() {\n    const {\n      articles,\n      onSaveText,\n      onSaveTitle,\n      onChangeText,\n      onChangeTitle,\n      onSelectArticle\n    } = this.props;\n    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\"div\", {\n      className: \"wrapper-article-list\"\n    }, articles.map(i => react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Article__WEBPACK_IMPORTED_MODULE_3__[\"Article\"], {\n      key: i.id,\n      id: i.id,\n      text: i.text,\n      editedText: i.editedText,\n      title: i.title,\n      editedTitle: i.editedTitle,\n      selected: i.selected,\n      onChangeText: onChangeText,\n      onSaveText: onSaveText,\n      onChangeTitle: onChangeTitle,\n      onSaveTitle: onSaveTitle,\n      onSelectArticle: onSelectArticle\n    })));\n  }\n\n}\nArticleList.propTypes = {\n  articles: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.array.isRequired,\n  onChangeText: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,\n  onSaveText: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,\n  onChangeTitle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,\n  onSaveTitle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,\n  onSelectArticle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired\n};\n\n//# sourceURL=webpack:///./src/client/admin/components/article/ArticleList.js?");
-
-/***/ }),
-
-/***/ "./src/client/admin/components/article/ArticleList.scss":
-/*!**************************************************************!*\
-  !*** ./src/client/admin/components/article/ArticleList.scss ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/client/admin/components/article/ArticleList.scss?");
-
-/***/ }),
-
-/***/ "./src/client/admin/containers/ArticlePage.js":
-/*!****************************************************!*\
-  !*** ./src/client/admin/containers/ArticlePage.js ***!
-  \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _ducks_article__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ducks/article */ \"./src/client/admin/ducks/article.js\");\n/* harmony import */ var _components_article_ArticleForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/article/ArticleForm */ \"./src/client/admin/components/article/ArticleForm.js\");\n\n\n\n\n\nclass ArticlePage extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  render() {\n    const {\n      article,\n      changeTitle,\n      changeText,\n      createArticle,\n      selectArticle,\n      saveText,\n      saveTitle\n    } = this.props;\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_article_ArticleForm__WEBPACK_IMPORTED_MODULE_3__[\"ArticleForm\"], {\n      article: article,\n      onSaveText: saveText,\n      onSaveTitle: saveTitle,\n      onChangeText: changeText,\n      onChangeTitle: changeTitle,\n      onCreateArticle: createArticle,\n      onSelectArticle: selectArticle\n    }));\n  }\n\n}\n\nconst mapState2props = state => ({\n  article: state.article\n});\n\nconst mapDispatch2props = {\n  createArticle: _ducks_article__WEBPACK_IMPORTED_MODULE_2__[\"createArticle\"],\n  selectArticle: _ducks_article__WEBPACK_IMPORTED_MODULE_2__[\"selectArticle\"],\n  changeText: _ducks_article__WEBPACK_IMPORTED_MODULE_2__[\"changeText\"],\n  changeTitle: _ducks_article__WEBPACK_IMPORTED_MODULE_2__[\"changeTitle\"],\n  saveText: _ducks_article__WEBPACK_IMPORTED_MODULE_2__[\"saveText\"],\n  saveTitle: _ducks_article__WEBPACK_IMPORTED_MODULE_2__[\"saveTitle\"]\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__[\"connect\"])(mapState2props, mapDispatch2props)(ArticlePage));\n\n//# sourceURL=webpack:///./src/client/admin/containers/ArticlePage.js?");
-
-/***/ }),
-
-/***/ "./src/client/admin/containers/FeedbackPage.js":
-/*!*****************************************************!*\
-  !*** ./src/client/admin/containers/FeedbackPage.js ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\nclass FeedbackPage extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, \"\\u0442\\u0443\\u0442 \\u0441\\u0442\\u043E\\u0440\\u0456\\u043D\\u043A\\u0430 \\u0434\\u043B\\u044F \\u0440\\u043E\\u0431\\u043E\\u0442\\u0438 \\u0437\\u0456 \\u0437\\u0432\\u043E\\u0440\\u043E\\u0442\\u043D\\u0456\\u043C \\u0437\\u0432'\\u044F\\u0437\\u043A\\u043E\\u043C.\");\n  }\n\n}\n\nconst mapState2props = state => ({});\n\nconst mapDispatch2props = dispatch => ({});\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__[\"connect\"])(mapState2props, mapDispatch2props)(FeedbackPage));\n\n//# sourceURL=webpack:///./src/client/admin/containers/FeedbackPage.js?");
-
-/***/ }),
-
-/***/ "./src/client/admin/containers/Main.js":
-/*!*********************************************!*\
-  !*** ./src/client/admin/containers/Main.js ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router */ \"./node_modules/react-router/es/index.js\");\n/* harmony import */ var _common_components_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../common/components/Header */ \"./src/client/common/components/Header.js\");\n/* harmony import */ var _UserPage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./UserPage */ \"./src/client/admin/containers/UserPage.js\");\n/* harmony import */ var _ArticlePage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ArticlePage */ \"./src/client/admin/containers/ArticlePage.js\");\n/* harmony import */ var _FeedbackPage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FeedbackPage */ \"./src/client/admin/containers/FeedbackPage.js\");\n\n\n\n\n\n\n\nclass Main extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  render() {\n    const {\n      router\n    } = this.props;\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_common_components_Header__WEBPACK_IMPORTED_MODULE_2__[\"Header\"], {\n      router: router\n    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__[\"Switch\"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__[\"Route\"], {\n      path: \"/articles\",\n      component: _ArticlePage__WEBPACK_IMPORTED_MODULE_4__[\"default\"]\n    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__[\"Route\"], {\n      path: \"/users\",\n      component: _UserPage__WEBPACK_IMPORTED_MODULE_3__[\"default\"]\n    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__[\"Route\"], {\n      path: \"/feedback\",\n      component: _FeedbackPage__WEBPACK_IMPORTED_MODULE_5__[\"default\"]\n    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__[\"Route\"], {\n      component: _ArticlePage__WEBPACK_IMPORTED_MODULE_4__[\"default\"]\n    })));\n  }\n\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_1__[\"withRouter\"])(Main));\n\n//# sourceURL=webpack:///./src/client/admin/containers/Main.js?");
-
-/***/ }),
-
-/***/ "./src/client/admin/containers/UserPage.js":
-/*!*************************************************!*\
-  !*** ./src/client/admin/containers/UserPage.js ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\nclass UserPage extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, \"\\u0442\\u0443\\u0442 \\u0441\\u0442\\u043E\\u0440\\u0456\\u043D\\u043A\\u0430 \\u0434\\u043B\\u044F \\u0440\\u043E\\u0431\\u043E\\u0442\\u0438 \\u0456\\u0437 \\u043A\\u043E\\u0440\\u0438\\u0441\\u0442\\u0443\\u0432\\u0430\\u0447\\u0430\\u043C\\u0438.\");\n  }\n\n}\n\nconst mapState2props = state => ({});\n\nconst mapDispatch2props = dispatch => ({});\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__[\"connect\"])(mapState2props, mapDispatch2props)(UserPage));\n\n//# sourceURL=webpack:///./src/client/admin/containers/UserPage.js?");
-
-/***/ }),
-
-/***/ "./src/client/admin/ducks/article.js":
-/*!*******************************************!*\
-  !*** ./src/client/admin/ducks/article.js ***!
-  \*******************************************/
-/*! exports provided: reducer, saveTitle, saveText, changeTitle, changeText, selectArticle, createArticle, saveArticle */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"reducer\", function() { return reducer; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"saveTitle\", function() { return saveTitle; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"saveText\", function() { return saveText; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"changeTitle\", function() { return changeTitle; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"changeText\", function() { return changeText; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"selectArticle\", function() { return selectArticle; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createArticle\", function() { return createArticle; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"saveArticle\", function() { return saveArticle; });\n/* harmony import */ var _common_util_request__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common/util/request */ \"./src/client/common/util/request.js\");\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\nconst SELECT_ARTICLE = \"SELECT_ARTICLE\";\nconst CREATE_ARTICLE = \"CREATE_ARTICLE\";\nconst CHANGE_TITLE = \"CHANGE_TITLE\";\nconst SAVE_TITLE = \"SAVE_TITLE\";\nconst CHANGE_TEXT = \"CHANGE_TEXT\";\nconst SAVE_TEXT = \"SAVE_TEXT\";\nconst SAVE_ARTICLE_SEND = \"SAVE_ARTICLE_SEND\";\nconst SAVE_ARTICLE_SUCCESS = \"SAVE_ARTICLE_SUCCESS\";\nconst SAVE_ARTICLE_FAILED = \"SAVE_ARTICLE_FAILED\";\nconst initialState = {\n  failed: false,\n  errorCode: \"\",\n  articles: []\n};\n\nconst newArticle = articles => ({\n  selected: false,\n  changed: false,\n  id: `-${articles.length}`,\n  title: \"Щось новеньке, що додав наш чудовий автор\",\n  editedTitle: \"Щось новеньке, що додав наш чудовий автор\",\n  text: \"Тут бере свій початок нова стаття, тут бере свій початок світло\",\n  editedText: \"Тут бере свій початок нова стаття, тут бере свій початок світло\",\n  author: null\n});\n\nconst reducer = (state = initialState, action) => {\n  switch (action.type) {\n    case CHANGE_TITLE:\n      return _objectSpread({}, state, {\n        articles: state.articles.map(i => i.id === action.id ? _objectSpread({}, i, {\n          editedTitle: action.title\n        }) : i)\n      });\n\n    case SAVE_TITLE:\n      return _objectSpread({}, state, {\n        articles: state.articles.map(i => i.id === action.id ? _objectSpread({}, i, {\n          title: i.editedTitle\n        }) : i)\n      });\n\n    case CHANGE_TEXT:\n      return _objectSpread({}, state, {\n        articles: state.articles.map(i => i.id === action.id ? _objectSpread({}, i, {\n          editedText: action.text\n        }) : i)\n      });\n\n    case SAVE_TEXT:\n      return _objectSpread({}, state, {\n        articles: state.articles.map(i => i.id === action.id ? _objectSpread({}, i, {\n          text: i.editedText\n        }) : i)\n      });\n\n    case CREATE_ARTICLE:\n      return _objectSpread({}, state, {\n        articles: [...state.articles, newArticle(state.articles)]\n      });\n\n    case SELECT_ARTICLE:\n      return _objectSpread({}, state, {\n        articles: state.articles.map(i => i.id === action.id ? _objectSpread({}, i, {\n          selected: !i.selected\n        }) : i)\n      });\n\n    case SAVE_ARTICLE_SEND:\n    case SAVE_ARTICLE_SUCCESS:\n    case SAVE_ARTICLE_FAILED:\n    default:\n      return state;\n  }\n};\nconst saveTitle = id => ({\n  type: SAVE_TITLE,\n  id\n});\nconst saveText = id => ({\n  type: SAVE_TEXT,\n  id\n});\nconst changeTitle = (title, id) => ({\n  type: CHANGE_TITLE,\n  title,\n  id\n});\nconst changeText = (text, id) => ({\n  type: CHANGE_TEXT,\n  text,\n  id\n});\nconst selectArticle = id => ({\n  type: SELECT_ARTICLE,\n  id\n});\nconst createArticle = () => ({\n  type: CREATE_ARTICLE\n});\nconst saveArticle = article => dispatch => {\n  dispatch({\n    type: SAVE_ARTICLE_SEND,\n    article\n  });\n  fetch(\"/api/admin/article\", Object(_common_util_request__WEBPACK_IMPORTED_MODULE_0__[\"getFetchInitProps\"])(\"post\", {\n    article\n  })).then(res => res.json()).then(res => {\n    if (res && res.status === 200) {\n      dispatch({\n        type: SAVE_ARTICLE_SUCCESS,\n        payload: res.payload\n      });\n    } else {\n      throw new res.errorCode();\n    }\n  }).catch(errorCode => dispatch({\n    type: SAVE_ARTICLE_FAILED,\n    errorCode\n  }));\n};\n\n//# sourceURL=webpack:///./src/client/admin/ducks/article.js?");
-
-/***/ }),
-
-/***/ "./src/client/admin/index.js":
-/*!***********************************!*\
-  !*** ./src/client/admin/index.js ***!
-  \***********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../index.scss */ \"./src/client/index.scss\");\n/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../fonts.scss */ \"./src/client/fonts.scss\");\n/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fonts_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! redux-logger */ \"./node_modules/redux-logger/dist/redux-logger.js\");\n/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! redux-thunk */ \"./node_modules/redux-thunk/es/index.js\");\n/* harmony import */ var _ducks_article__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ducks/article */ \"./src/client/admin/ducks/article.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/es/index.js\");\n/* harmony import */ var _containers_Main__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./containers/Main */ \"./src/client/admin/containers/Main.js\");\n\n\n\n\n\n\n\n\n\n\n\nconst reducer = Object(redux__WEBPACK_IMPORTED_MODULE_4__[\"combineReducers\"])({\n  article: _ducks_article__WEBPACK_IMPORTED_MODULE_7__[\"reducer\"]\n});\nconst store = Object(redux__WEBPACK_IMPORTED_MODULE_4__[\"createStore\"])(reducer, Object(redux__WEBPACK_IMPORTED_MODULE_4__[\"applyMiddleware\"])(redux_thunk__WEBPACK_IMPORTED_MODULE_6__[\"default\"], Object(redux_logger__WEBPACK_IMPORTED_MODULE_5__[\"createLogger\"])()));\nreact_dom__WEBPACK_IMPORTED_MODULE_3___default.a.render(react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_8__[\"Provider\"], {\n  store: store\n}, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__[\"BrowserRouter\"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__[\"Route\"], {\n  path: \"/\",\n  component: _containers_Main__WEBPACK_IMPORTED_MODULE_10__[\"default\"]\n}))), document.getElementById(\"root\"));\n\n//# sourceURL=webpack:///./src/client/admin/index.js?");
-
-/***/ }),
-
 /***/ "./src/client/common/components/Button.js":
 /*!************************************************!*\
   !*** ./src/client/common/components/Button.js ***!
@@ -1497,52 +1252,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, exports) {
 
 eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/client/common/components/Button.scss?");
-
-/***/ }),
-
-/***/ "./src/client/common/components/CheckBox.js":
-/*!**************************************************!*\
-  !*** ./src/client/common/components/CheckBox.js ***!
-  \**************************************************/
-/*! exports provided: CheckBox */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"CheckBox\", function() { return CheckBox; });\n/* harmony import */ var _CheckBox_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CheckBox.scss */ \"./src/client/common/components/CheckBox.scss\");\n/* harmony import */ var _CheckBox_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_CheckBox_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\n\nclass CheckBox extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {\n  constructor(...args) {\n    super(...args);\n\n    _defineProperty(this, \"onClick\", e => {\n      if (this.props.onClick) {\n        this.props.onClick(e);\n      }\n    });\n  }\n\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\"div\", {\n      className: \"wrapper-checkbox\",\n      onClick: this.onClick\n    }, this.props.checked ? \"X\" : \"\");\n  }\n\n}\nCheckBox.propTypes = {\n  checked: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,\n  onClick: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func\n};\n\n//# sourceURL=webpack:///./src/client/common/components/CheckBox.js?");
-
-/***/ }),
-
-/***/ "./src/client/common/components/CheckBox.scss":
-/*!****************************************************!*\
-  !*** ./src/client/common/components/CheckBox.scss ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/client/common/components/CheckBox.scss?");
-
-/***/ }),
-
-/***/ "./src/client/common/components/Header.js":
-/*!************************************************!*\
-  !*** ./src/client/common/components/Header.js ***!
-  \************************************************/
-/*! exports provided: Header */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Header\", function() { return Header; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/es/index.js\");\n/* harmony import */ var _Header_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header.scss */ \"./src/client/common/components/Header.scss\");\n/* harmony import */ var _Header_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Header_scss__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nclass Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n      className: \"wrapper-header\"\n    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n      className: \"wrapper-header-title\"\n    }, \"вовчок.\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n      className: \"wrapper-header-menu\"\n    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"Link\"], {\n      to: \"/articles\"\n    }, \"статті\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"Link\"], {\n      to: \"/users\"\n    }, \"користувачі\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"Link\"], {\n      to: \"/feedback\"\n    }, \"зворотній зв'язок\")));\n  }\n\n}\n\n//# sourceURL=webpack:///./src/client/common/components/Header.js?");
-
-/***/ }),
-
-/***/ "./src/client/common/components/Header.scss":
-/*!**************************************************!*\
-  !*** ./src/client/common/components/Header.scss ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/client/common/components/Header.scss?");
 
 /***/ }),
 
@@ -1569,18 +1278,6 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sr
 
 /***/ }),
 
-/***/ "./src/client/common/util/request.js":
-/*!*******************************************!*\
-  !*** ./src/client/common/util/request.js ***!
-  \*******************************************/
-/*! exports provided: getFetchInitProps */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getFetchInitProps\", function() { return getFetchInitProps; });\nfunction getFetchInitProps(method, body) {\n  const res = {\n    body: undefined,\n    credentials: \"include\",\n    headers: new Headers({\n      \"Accept\": \"application/json\",\n      \"Content-Type\": \"application/json\"\n    }),\n    method,\n    mode: \"same-origin\"\n  };\n\n  if (body) {\n    res.body = JSON.stringify(body);\n  }\n\n  return res;\n}\n\n//# sourceURL=webpack:///./src/client/common/util/request.js?");
-
-/***/ }),
-
 /***/ "./src/client/fonts.scss":
 /*!*******************************!*\
   !*** ./src/client/fonts.scss ***!
@@ -1600,6 +1297,65 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sr
 /***/ (function(module, exports) {
 
 eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/client/index.scss?");
+
+/***/ }),
+
+/***/ "./src/client/signin/components/SigninForm.js":
+/*!****************************************************!*\
+  !*** ./src/client/signin/components/SigninForm.js ***!
+  \****************************************************/
+/*! exports provided: SigninForm */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"SigninForm\", function() { return SigninForm; });\n/* harmony import */ var _SigninForm_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SigninForm.scss */ \"./src/client/signin/components/SigninForm.scss\");\n/* harmony import */ var _SigninForm_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_SigninForm_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _common_components_Input__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../common/components/Input */ \"./src/client/common/components/Input.js\");\n/* harmony import */ var _common_components_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../common/components/Button */ \"./src/client/common/components/Button.js\");\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\n\n\n\nclass SigninForm extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {\n  constructor(props) {\n    super(props);\n\n    _defineProperty(this, \"onLoginChange\", value => {\n      const pass = this.props.pass;\n      this.setState({\n        visibleButton: !!(value && pass)\n      });\n      this.props.onChangeLogin(value);\n    });\n\n    _defineProperty(this, \"onPassChange\", value => {\n      const login = this.props.login;\n      this.setState({\n        visibleButton: !!(value && login)\n      });\n      this.props.onChangePass(value);\n    });\n\n    this.state = {\n      visibleButton: false\n    };\n  }\n\n  componentDidMount() {\n    setTimeout(() => setInterval(() => {\n      document.getElementById(\"signin-form\").style[\"background-color\"] = `#${Math.ceil(Math.random() * (0xffffff - 0x000000) + 0x000000)}`;\n    }, 3000), 1000);\n  }\n\n  render() {\n    const {\n      login,\n      pass\n    } = this.props;\n    const {\n      visibleButton\n    } = this.state;\n    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\"div\", {\n      id: \"signin-form\",\n      className: \"wrapper-signin-form\"\n    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\"div\", {\n      className: \"wrapper-input-block\"\n    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_common_components_Input__WEBPACK_IMPORTED_MODULE_3__[\"Input\"], {\n      value: login,\n      onChange: this.onLoginChange\n    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_common_components_Input__WEBPACK_IMPORTED_MODULE_3__[\"Input\"], {\n      value: pass,\n      onChange: this.onPassChange\n    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_common_components_Button__WEBPACK_IMPORTED_MODULE_4__[\"Button\"], {\n      className: `login-button ${visibleButton ? \"visible\" : \"\"}`,\n      label: \"увійти\"\n    })));\n  }\n\n}\nSigninForm.propTypes = {\n  login: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,\n  pass: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,\n  onChangeLogin: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,\n  onChangePass: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired\n};\n\n//# sourceURL=webpack:///./src/client/signin/components/SigninForm.js?");
+
+/***/ }),
+
+/***/ "./src/client/signin/components/SigninForm.scss":
+/*!******************************************************!*\
+  !*** ./src/client/signin/components/SigninForm.scss ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/client/signin/components/SigninForm.scss?");
+
+/***/ }),
+
+/***/ "./src/client/signin/containers/Signin.js":
+/*!************************************************!*\
+  !*** ./src/client/signin/containers/Signin.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _components_SigninForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/SigninForm */ \"./src/client/signin/components/SigninForm.js\");\n/* harmony import */ var _ducks_signin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../ducks/signin */ \"./src/client/signin/ducks/signin.js\");\n\n\n\n\n\nclass Signin extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  render() {\n    const {\n      signin,\n      changeLogin,\n      changePass\n    } = this.props;\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SigninForm__WEBPACK_IMPORTED_MODULE_2__[\"SigninForm\"], {\n      login: signin.login,\n      pass: signin.pass,\n      onChangeLogin: changeLogin,\n      onChangePass: changePass\n    });\n  }\n\n}\n\nconst mapState2props = state => ({\n  signin: state.signin\n});\n\nconst mapDispatch2props = {\n  changeLogin: _ducks_signin__WEBPACK_IMPORTED_MODULE_3__[\"changeLogin\"],\n  changePass: _ducks_signin__WEBPACK_IMPORTED_MODULE_3__[\"changePass\"]\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__[\"connect\"])(mapState2props, mapDispatch2props)(Signin));\n\n//# sourceURL=webpack:///./src/client/signin/containers/Signin.js?");
+
+/***/ }),
+
+/***/ "./src/client/signin/ducks/signin.js":
+/*!*******************************************!*\
+  !*** ./src/client/signin/ducks/signin.js ***!
+  \*******************************************/
+/*! exports provided: reducer, changeLogin, changePass */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"reducer\", function() { return reducer; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"changeLogin\", function() { return changeLogin; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"changePass\", function() { return changePass; });\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\nconst CHANGE_LOGIN = \"CHANGE_LOGIN\";\nconst CHANGE_PASS = \"CHANGE_PASS\";\nconst initialState = {\n  failed: false,\n  errorCode: \"\",\n  login: \"\",\n  pass: \"\"\n};\nconst reducer = (state = initialState, action) => {\n  switch (action.type) {\n    case CHANGE_LOGIN:\n      return _objectSpread({}, state, {\n        login: action.login\n      });\n\n    case CHANGE_PASS:\n      return _objectSpread({}, state, {\n        pass: action.pass\n      });\n\n    default:\n      return state;\n  }\n};\nconst changeLogin = login => ({\n  type: CHANGE_LOGIN,\n  login\n});\nconst changePass = pass => ({\n  type: CHANGE_PASS,\n  pass\n});\n\n//# sourceURL=webpack:///./src/client/signin/ducks/signin.js?");
+
+/***/ }),
+
+/***/ "./src/client/signin/index.js":
+/*!************************************!*\
+  !*** ./src/client/signin/index.js ***!
+  \************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../index.scss */ \"./src/client/index.scss\");\n/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../fonts.scss */ \"./src/client/fonts.scss\");\n/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fonts_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! redux-logger */ \"./node_modules/redux-logger/dist/redux-logger.js\");\n/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! redux-thunk */ \"./node_modules/redux-thunk/es/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/es/index.js\");\n/* harmony import */ var _ducks_signin__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ducks/signin */ \"./src/client/signin/ducks/signin.js\");\n/* harmony import */ var _containers_Signin__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./containers/Signin */ \"./src/client/signin/containers/Signin.js\");\n\n\n\n\n\n\n\n\n\n\n\nconst reducer = Object(redux__WEBPACK_IMPORTED_MODULE_4__[\"combineReducers\"])({\n  signin: _ducks_signin__WEBPACK_IMPORTED_MODULE_9__[\"reducer\"]\n});\nconst store = Object(redux__WEBPACK_IMPORTED_MODULE_4__[\"createStore\"])(reducer, Object(redux__WEBPACK_IMPORTED_MODULE_4__[\"applyMiddleware\"])(redux_thunk__WEBPACK_IMPORTED_MODULE_6__[\"default\"], Object(redux_logger__WEBPACK_IMPORTED_MODULE_5__[\"createLogger\"])()));\nreact_dom__WEBPACK_IMPORTED_MODULE_3___default.a.render(react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_7__[\"Provider\"], {\n  store: store\n}, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__[\"BrowserRouter\"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__[\"Route\"], {\n  path: \"/\",\n  component: _containers_Signin__WEBPACK_IMPORTED_MODULE_10__[\"default\"]\n}))), document.getElementById(\"root\"));\n\n//# sourceURL=webpack:///./src/client/signin/index.js?");
 
 /***/ })
 

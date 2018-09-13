@@ -1,7 +1,14 @@
 import React from "react";
 import {connect} from "react-redux";
 
-import {createArticle, selectArticle} from "../ducks/article";
+import {
+    createArticle,
+    selectArticle,
+    changeText,
+    saveText,
+    changeTitle,
+    saveTitle,
+} from "../ducks/article";
 import {ArticleForm} from "../components/article/ArticleForm";
 
 class ArticlePage extends React.Component {
@@ -9,8 +16,12 @@ class ArticlePage extends React.Component {
         const {
             article,
 
+            changeTitle,
+            changeText,
             createArticle,
             selectArticle,
+            saveText,
+            saveTitle,
         } = this.props;
 
         return (
@@ -18,6 +29,10 @@ class ArticlePage extends React.Component {
                 <ArticleForm
                     article={article}
 
+                    onSaveText={saveText}
+                    onSaveTitle={saveTitle}
+                    onChangeText={changeText}
+                    onChangeTitle={changeTitle}
                     onCreateArticle={createArticle}
                     onSelectArticle={selectArticle}
                 />
@@ -33,6 +48,10 @@ const mapState2props = state => ({
 const mapDispatch2props = {
     createArticle,
     selectArticle,
+    changeText,
+    changeTitle,
+    saveText,
+    saveTitle,
 };
 
 export default connect(mapState2props, mapDispatch2props)(ArticlePage);

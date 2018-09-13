@@ -1,0 +1,27 @@
+.wrapper-article-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  background-color: #cccccc;
+  padding: 10px;
+
+  &.selected {
+    background-color: #800000;
+  }
+}
+
+.wrapper-article-checkbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.wrapper-article-title {
+  font-size: 30px;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}

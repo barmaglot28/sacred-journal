@@ -9,6 +9,10 @@ export class ArticleList extends React.Component {
         const {
             articles,
 
+            onSaveText,
+            onSaveTitle,
+            onChangeText,
+            onChangeTitle,
             onSelectArticle,
         } = this.props;
 
@@ -18,10 +22,20 @@ export class ArticleList extends React.Component {
                     key={i.id}
 
                     id={i.id}
+
                     text={i.text}
+                    editedText={i.editedText}
+
                     title={i.title}
+                    editedTitle={i.editedTitle}
 
                     selected={i.selected}
+
+                    onChangeText={onChangeText}
+                    onSaveText={onSaveText}
+
+                    onChangeTitle={onChangeTitle}
+                    onSaveTitle={onSaveTitle}
 
                     onSelectArticle={onSelectArticle}
                 />)}
@@ -32,6 +46,12 @@ export class ArticleList extends React.Component {
 
 ArticleList.propTypes = {
     articles: PropTypes.array.isRequired,
+
+    onChangeText: PropTypes.func.isRequired,
+    onSaveText: PropTypes.func.isRequired,
+
+    onChangeTitle: PropTypes.func.isRequired,
+    onSaveTitle: PropTypes.func.isRequired,
 
     onSelectArticle: PropTypes.func.isRequired,
 };

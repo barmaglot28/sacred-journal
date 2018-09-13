@@ -1,7 +1,8 @@
 .wrapper-button {
   min-height: 20px;
   min-width: 40px;
-  width: 120px;
+  width: 170px;
+  text-align: center;
   cursor: pointer;
 
   margin-top: 10px;
@@ -12,8 +13,10 @@
   -moz-user-select: none;
   user-select: none;
 
+  transition: color 0.5s;
+
   &:hover {
-    text-decoration: line-through;
+    color: navajowhite;
   }
 }
 
@@ -22,6 +25,6 @@
   cursor: default;
 
   &:hover {
-    text-decoration: none;
+    color: #999999;
   }
 }

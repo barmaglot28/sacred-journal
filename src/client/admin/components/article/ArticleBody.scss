@@ -1,0 +1,21 @@
+.wrapper-article-body {
+  background-color: transparent;
+  padding: 0;
+  height: 0;
+  transition: all 0.3s;
+}
+
+.wrapper-article-body-text {
+  color: transparent;
+  transition: color 1s;
+}
+
+.expanded-body-text {
+  color: black;
+}
+
+.expanded {
+  background-color: #dddddd;
+  height: 100px;
+  padding: 10px;
+}

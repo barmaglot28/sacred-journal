@@ -18,20 +18,20 @@ export class ArticleActionMenu extends React.Component {
         return (
             <div className={"wrapper-article-action-menu"}>
                 <Button
-                    label={"Додати щось новеньке"}
+                    label={"Додати новеньке"}
                     onClick={onCreateArticle}
                 />
                 <Button
                     disabled={additionalButtonsDisabled}
-                    label={"Зберегти статтю"}
+                    label={"Зберегти"}
                 />
                 <Button
                     disabled={additionalButtonsDisabled}
-                    label={"Редагувати статтю"}
+                    label={"Редагувати"}
                 />
                 <Button
                     disabled={additionalButtonsDisabled}
-                    label={"Видалити статтю"}
+                    label={"Видалити"}
                 />
             </div>
         )

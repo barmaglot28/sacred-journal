@@ -11,6 +11,10 @@ export class ArticleForm extends React.Component {
         const {
             article,
 
+            onSaveText,
+            onSaveTitle,
+            onChangeText,
+            onChangeTitle,
             onCreateArticle,
             onSelectArticle,
         } = this.props;
@@ -24,6 +28,10 @@ export class ArticleForm extends React.Component {
                 <ArticleList
                     articles={article.articles}
 
+                    onSaveTitle={onSaveTitle}
+                    onSaveText={onSaveText}
+                    onChangeText={onChangeText}
+                    onChangeTitle={onChangeTitle}
                     onSelectArticle={onSelectArticle}
                 />
             </div>
@@ -32,8 +40,12 @@ export class ArticleForm extends React.Component {
 }
 
 ArticleForm.propTypes = {
-    article: PropTypes.object,
+    article: PropTypes.object.isRequired,
 
-    onSelectArticle: PropTypes.func,
-    onCreateArticle: PropTypes.func,
+    onSaveText: PropTypes.func.isRequired,
+    onSaveTitle: PropTypes.func.isRequired,
+    onChangeText: PropTypes.func.isRequired,
+    onChangeTitle: PropTypes.func.isRequired,
+    onSelectArticle: PropTypes.func.isRequired,
+    onCreateArticle: PropTypes.func.isRequired,
 };

@@ -12,7 +12,8 @@ process.env.BABEL_ENV = "development";
 module.exports = {
     mode: "development",
     entry: {
-        admin: "./src/client/admin/index.js"
+        admin: "./src/client/admin/index.js",
+        signin: "./src/client/signin/index.js"
     },
     output: {
         path: path.resolve(__dirname, "build"),

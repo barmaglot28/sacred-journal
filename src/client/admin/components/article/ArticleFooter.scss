@@ -1,0 +1,11 @@
+.wrapper-article-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  background-color: #cccccc;
+
+  &.selected {
+    background-color: #800000;
+  }
+}
