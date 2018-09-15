@@ -4,6 +4,7 @@
   justify-content: flex-end;
 
   background-color: #cccccc;
+  transition: background-color 500ms;
 
   &.selected {
     background-color: #800000;

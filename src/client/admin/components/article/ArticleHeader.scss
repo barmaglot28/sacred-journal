@@ -5,6 +5,7 @@
 
   background-color: #cccccc;
   padding: 10px;
+  transition: background-color 500ms;
 
   &.selected {
     background-color: #800000;

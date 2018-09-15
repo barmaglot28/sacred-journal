@@ -1,23 +1,25 @@
-const path = require("path");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const LiveReloadPlugin = require("webpack-livereload-plugin");
+const path = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const HotModuleReplacementPlugin = new webpack.HotModuleReplacementPlugin();
 
 const ExtractStylePlugin = new ExtractTextPlugin({
     filename: './[name].css',
     allChunks: true
 });
 
-process.env.BABEL_ENV = "development";
+process.env.BABEL_ENV = 'development';
 
 module.exports = {
-    mode: "development",
+    mode: 'development',
     entry: {
-        admin: "./src/client/admin/index.js",
-        signin: "./src/client/signin/index.js"
+        admin: ['webpack-hot-middleware/client', './src/client/admin/index.js'],
+        signin: ['webpack-hot-middleware/client', './src/client/signin/index.js'],
     },
     output: {
-        path: path.resolve(__dirname, "build"),
-        filename: "[name].js"
+        path: path.resolve(__dirname, 'build'),
+        filename: '[name].js'
     },
     module: {
         rules: [
@@ -25,71 +27,78 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader"
+                    loader: 'babel-loader'
                 }
             },
             {
-                test: /\.(scss|css)$/,
-                loader: ExtractStylePlugin.extract({
-                    fallback: {
-                        loader: 'style-loader',
-                    },
-                    use: [
-                        {
-                            loader: 'css-loader'
-                        },
-                        {
-                            loader: 'resolve-url-loader'
-                        },
-
-                        {
-                            loader: 'sass-loader'
-                        }
-                    ]
-                })
-            },
-            {
-                test: /\.sass$/,
-                use: ExtractTextPlugin.extract(
+                test: /(\.css|\.scss|\.sass)$/,
+                use: [
+                    'style-loader',
                     {
-                        fallback: "style-loader",
-                        use: ["css-loader", "sass-loader"]
-                    })
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }, {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: () => [
+                                require('autoprefixer')
+                            ],
+                            sourceMap: true
+                        }
+                    }, {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
+                ]
             },
             {
-                test: /\.svg$/,
-                loader: 'raw-loader'
+                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 10000,
+                            mimetype: 'image/svg+xml'
+                        }
+                    }
+                ]
             },
             {
-                test: /\.woff$/,
-                loader: 'url-loader?mimetype=application/font-woff&name=[name].[ext]'
+                test: /\.eot(\?v=\d+.\d+.\d+)?$/,
+                use: ['file-loader']
             },
             {
-                test: /\.woff2$/,
-                loader: 'url-loader?mimetype=application/font-woff2&name=[name].[ext]'
+                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 10000,
+                            mimetype: 'application/font-woff'
+                        }
+                    }
+                ]
             },
             {
-                test: /\.otf$/,
-                loader:
-                    'url-loader?mimetype=application/octet-stream&name=[name].[ext]'
+                test: /\.[ot]tf(\?v=\d+.\d+.\d+)?$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 10000,
+                            mimetype: 'application/octet-stream'
+                        }
+                    }
+                ]
             },
-            {
-                test: /\.ttf$/,
-                loader:
-                    'url-loader?mimetype=application/octet-stream&name=[name].[ext]'
-            },
-            {
-                test: /\.eot$/,
-                loader:
-                    'url-loader?mimetype=application/vnd.ms-fontobject&name=[name].[ext]'
-            }
         ]
     },
     plugins: [
         ExtractStylePlugin,
-        new LiveReloadPlugin({
-            host: "localhost",
-            port: 34512
-        }),
+        HotModuleReplacementPlugin,
     ]
 };

@@ -1,4 +1,4 @@
-module.exports = app => {
+module.exports = router => {
     const publicRoutes = require("./public");
     const protectedRoutes = require("./protected");
 
@@ -6,13 +6,13 @@ module.exports = app => {
     const errorMiddleware = require("../middleware/error");
 
     for (const route of publicRoutes) {
-        app[route.method](route.path, [...route.middleware], route.handler);
+        router[route.method](route.path, [...route.middleware], route.handler);
     }
 
     for (const route of protectedRoutes) {
-        app[route.method](route.path, [authMiddleware.checkToken, ...route.middleware], route.handler);
+        router[route.method](route.path, [authMiddleware.checkToken, ...route.middleware], route.handler);
     }
 
-    app.use(errorMiddleware.notFoundHandler);
-    app.use(errorMiddleware.errorHandler);
+    router.use(errorMiddleware.notFoundHandler);
+    router.use(errorMiddleware.errorHandler);
 };
