@@ -1,26 +1,38 @@
-version: "3.5"
+version: '3.5'
 
 services:
   mongo:
     image: mongo
     command: mongod --rest
     volumes:
-    - "mongo-data:/data/db"
+    - 'mongo-data:/data/db'
     ports:
-    - "27017:27017"
+    - '27017:27017'
 
-  journal:
-    image: node
-    working_dir: "/app"
-    entrypoint: "yarn"
-    ports:
-      - "3000:3000"
+  modules:
+    image: node:8.9.4
+    working_dir: '/app'
+    command: 'yarn'
     volumes:
-      - "./src/:/app/src"
-      - "./package.json:/app/package.json"
-      - "./yarn.lock:/app/yarn.lock"
-      - "node_modules:/app/node_modules"
+    - './package.json:/app/package.json'
+    - 'journal_modules:/app/node_modules'
+
+  web:
+    image: node:8.9.4
+    working_dir: '/app'
+    command: 'yarn start'
+    ports:
+      - '3000:3000'
+    volumes:
+      - './src/:/app/src'
+      - './package.json:/app/package.json'
+      - './yarn.lock:/app/yarn.lock'
+      - './tsconfig.json:/app/tsconfig.json'
+      - './webpack.config.js:/app/webpack.config.js'
+      - 'journal_modules:/app/node_modules'
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
 
 volumes:
-  node_modules:
+  journal_modules:
   mongo-data:

@@ -19,3 +19,18 @@ ReactDOM.render(<Provider store={store}>
         <Route path="/" component={Main}/>
     </BrowserRouter>
 </Provider>, document.getElementById("root"));
+
+if (module.hot) {
+    module.hot.accept(() => {
+        store.replaceReducer(reducer);
+
+        ReactDOM.render(
+            <Provider store={store}>
+                <BrowserRouter>
+                    <Route path="/" component={Main}/>
+                </BrowserRouter>
+            </Provider>,
+            document.getElementById('root')
+        );
+    });
+}

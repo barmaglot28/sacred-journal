@@ -1,24 +1,23 @@
-const path = require('path');
 const webpack = require('webpack');
+const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const HotModuleReplacementPlugin = new webpack.HotModuleReplacementPlugin();
-
 const ExtractStylePlugin = new ExtractTextPlugin({
-    filename: './[name].css',
+    filename: 'build/frontend/[name].css',
     allChunks: true
 });
 
 process.env.BABEL_ENV = 'development';
 
 module.exports = {
+    watch: false,
     mode: 'development',
     entry: {
         admin: ['webpack-hot-middleware/client', './src/client/admin/index.js'],
         signin: ['webpack-hot-middleware/client', './src/client/signin/index.js'],
     },
     output: {
-        path: path.resolve(__dirname, 'build'),
+        path: path.resolve(__dirname, 'build/frontend'),
         filename: '[name].js'
     },
     module: {
@@ -99,6 +98,6 @@ module.exports = {
     },
     plugins: [
         ExtractStylePlugin,
-        HotModuleReplacementPlugin,
+        new webpack.HotModuleReplacementPlugin(),
     ]
 };
