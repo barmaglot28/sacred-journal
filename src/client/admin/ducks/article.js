@@ -2,6 +2,7 @@ import {getFetchInitProps} from "../../common/util/request";
 
 const SELECT_ARTICLE = "SELECT_ARTICLE";
 const CREATE_ARTICLE = "CREATE_ARTICLE";
+const CANCEL_CHANGES = "CANCEL_CHANGES";
 
 const CHANGE_TITLE = "CHANGE_TITLE";
 const SAVE_TITLE = "SAVE_TITLE";
@@ -25,15 +26,21 @@ const newArticle = articles => ({
     changed: false,
 
     id: `-${articles.length}`,
-    title: "Щось новеньке, що додав наш чудовий автор",
-    editedTitle: "Щось новеньке, що додав наш чудовий автор",
-    text: "Тут бере свій початок нова стаття, тут бере свій початок світло",
-    editedText: "Тут бере свій початок нова стаття, тут бере свій початок світло",
+    title: "Щось нове, що додав наш чудовий автор",
+    editedTitle: "Щось нове, що додав наш чудовий автор",
+    text: "Тут бере свій початок нова прекрасна стаття",
+    editedText: "Тут бере свій початок нова прекрасна стаття",
     author: null,
 });
 
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
+        case CANCEL_CHANGES:
+            return ({
+                ...state,
+                articles: state.articles.map(i => i.id === action.id ? {...i, editedTitle: i.title} : i),
+            });
+
         case CHANGE_TITLE:
             return ({
                 ...state,
@@ -75,6 +82,11 @@ export const reducer = (state = initialState, action) => {
             return state;
     }
 };
+
+export const cancelChanges = id => ({
+    type: CANCEL_CHANGES,
+    id,
+});
 
 export const saveTitle = id => ({
     type: SAVE_TITLE,

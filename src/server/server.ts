@@ -4,6 +4,7 @@ import * as  cookieParser from 'cookie-parser';
 import * as  path from 'path';
 
 import {Express} from "express";
+import {initRoutes} from "./routes";
 
 export function initServer(): Express {
     const webpack = require('webpack');
@@ -27,9 +28,7 @@ export function initServer(): Express {
     app.set('view engine', 'pug');
     app.set('views', path.join(__dirname, './views'));
 
-    app.get('*', (req, res) => {
-        res.render('Index', {js: 'admin.js', css: 'admin.css'});
-    });
+    initRoutes(app);
 
     return app;
 }

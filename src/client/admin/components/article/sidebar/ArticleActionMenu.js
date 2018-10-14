@@ -3,7 +3,7 @@ import "./ArticleActionMenu.scss";
 import React from "react";
 import PropTypes from "prop-types";
 
-import {Button} from "../../../common/components/Button";
+import {Button} from "../../../../common/components/button/Button";
 
 export class ArticleActionMenu extends React.Component {
     render() {

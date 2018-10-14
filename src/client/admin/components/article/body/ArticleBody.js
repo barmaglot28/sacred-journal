@@ -2,40 +2,31 @@ import "./ArticleBody.scss";
 
 import React from "react";
 import PropTypes from "prop-types";
-import {Input} from "../../../common/components/Input";
+import {Textarea} from "../../../../common/components/textarea/Textarea";
 
 export class ArticleBody extends React.Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            editText: false,
-        };
     }
 
     render() {
         const {
+            editable,
+
             text,
             expanded,
             editedText,
-
-            onChangeText,
         } = this.props;
 
-        const {
-            editText,
-        } = this.state;
-
         return (
-            <div className={`wrapper-article-body ${expanded ? "expanded" : ""}`} onClick={this.onTextClick}>
+            <div className={`wrapper-article-body ${expanded ? "expanded" : ""}`}>
                 <div className={`wrapper-article-body-text ${expanded ? "expanded-body-text" : ""}`}>
                     {
-                        editText ?
-                            (<Input
-                                autofocus
+                        !editable ?
+                            <Textarea
                                 value={editedText}
-                                onChange={onChangeText}
-                            />)
+                                onChange={this.onChangeText}
+                            />
                             :
                             text
                     }
@@ -44,19 +35,17 @@ export class ArticleBody extends React.Component {
         )
     }
 
-    onTextClick = e => {
-        if (!this.state.editText) {
-            e.stopPropagation();
-
-            this.setState({
-                ...this.state,
-                editText: true,
-            });
-        }
+    onChangeText = value => {
+        const {id} = this.props;
+        this.props.onChangeText(value, id);
     }
 }
 
 ArticleBody.propTypes = {
+    editable: PropTypes.bool.isRequired,
+
+    id: PropTypes.string.isRequired,
+
     text: PropTypes.string.isRequired,
     editedText: PropTypes.string.isRequired,
     expanded: PropTypes.bool.isRequired,

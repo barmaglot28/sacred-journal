@@ -1,34 +1,41 @@
 import React from "react";
 import {connect} from "react-redux";
 import {SigninForm} from "../components/SigninForm";
-import {changeLogin, changePass} from "../ducks/signin";
+import {changeLogin, changePass, signin} from "../ducks/signin";
 
 class Signin extends React.Component {
     render() {
         const {
-            signin,
+            signinState,
 
             changeLogin,
             changePass,
+            signin,
         } = this.props;
 
         return (
             <SigninForm
-                login={signin.login}
-                pass={signin.pass}
+                failed={signinState.failed}
+                errorCode={signinState.errorCode}
+                locked={signinState.locked}
+                login={signinState.login}
+                password={signinState.password}
 
                 onChangeLogin={changeLogin}
                 onChangePass={changePass}
+                onSignin={signin}
             />
         )
     }
 }
 
 const mapState2props = state => ({
-    signin: state.signin,
+    signinState: state.signin,
 });
 
 const mapDispatch2props = {
+    signin,
+
     changeLogin,
     changePass,
 };

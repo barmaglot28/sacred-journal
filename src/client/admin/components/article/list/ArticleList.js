@@ -2,7 +2,7 @@ import "./ArticleList.scss";
 
 import React from "react";
 import PropTypes from "prop-types";
-import {Article} from "./Article";
+import {Article} from "../Article";
 
 export class ArticleList extends React.Component {
     render() {
@@ -14,6 +14,7 @@ export class ArticleList extends React.Component {
             onChangeText,
             onChangeTitle,
             onSelectArticle,
+            onCancelChanges,
         } = this.props;
 
         return (
@@ -37,6 +38,7 @@ export class ArticleList extends React.Component {
                     onChangeTitle={onChangeTitle}
                     onSaveTitle={onSaveTitle}
 
+                    onCancelChanges={onCancelChanges}
                     onSelectArticle={onSelectArticle}
                 />)}
             </div>
@@ -47,6 +49,7 @@ export class ArticleList extends React.Component {
 ArticleList.propTypes = {
     articles: PropTypes.array.isRequired,
 
+    onCancelChanges: PropTypes.func.isRequired,
     onChangeText: PropTypes.func.isRequired,
     onSaveText: PropTypes.func.isRequired,
 

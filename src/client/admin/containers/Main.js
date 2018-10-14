@@ -1,7 +1,7 @@
 import React from "react";
 import {Switch, Route, withRouter} from "react-router";
 
-import {Header} from "../../common/components/Header";
+import {Header} from "../../common/components/header/Header";
 
 import UserPage from "./UserPage";
 import ArticlePage from "./ArticlePage";

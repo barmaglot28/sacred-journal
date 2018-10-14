@@ -8,6 +8,7 @@ import {
     saveText,
     changeTitle,
     saveTitle,
+    cancelChanges,
 } from "../ducks/article";
 import {ArticleForm} from "../components/article/ArticleForm";
 
@@ -22,6 +23,7 @@ class ArticlePage extends React.Component {
             selectArticle,
             saveText,
             saveTitle,
+            cancelChanges,
         } = this.props;
 
         return (
@@ -29,6 +31,7 @@ class ArticlePage extends React.Component {
                 <ArticleForm
                     article={article}
 
+                    onCancelChanges={cancelChanges}
                     onSaveText={saveText}
                     onSaveTitle={saveTitle}
                     onChangeText={changeText}
@@ -48,6 +51,7 @@ const mapState2props = state => ({
 const mapDispatch2props = {
     createArticle,
     selectArticle,
+    cancelChanges,
     changeText,
     changeTitle,
     saveText,

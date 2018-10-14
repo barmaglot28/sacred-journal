@@ -2,12 +2,9 @@ import "./Article.scss";
 
 import React from "react";
 import PropTypes from "prop-types";
-import {CheckBox} from "../../../common/components/CheckBox";
-import {Input} from "../../../common/components/Input";
-import {Button} from "../../../common/components/Button";
-import {ArticleHeader} from "./ArticleHeader";
-import {ArticleBody} from "./ArticleBody";
-import {ArticleFooter} from "./ArticleFooter";
+import {ArticleHeader} from "./header/ArticleHeader";
+import {ArticleBody} from "./body/ArticleBody";
+import {ArticleFooter} from "./footer/ArticleFooter";
 
 export class Article extends React.Component {
     constructor(props) {
@@ -15,6 +12,7 @@ export class Article extends React.Component {
 
         this.state = {
             expanded: false,
+            editable: false,
             firstVer: {
                 title: props.title,
                 text: props.text,
@@ -43,6 +41,7 @@ export class Article extends React.Component {
         } = this.props;
 
         const {
+            editable,
             expanded,
         } = this.state;
 
@@ -52,15 +51,20 @@ export class Article extends React.Component {
                     id={id}
                     title={title}
                     selected={selected}
+                    editable={editable}
+
                     editedTitle={editedTitle}
 
-                    onSaveTitle={onSaveTitle}
                     onChangeTitle={onChangeTitle}
                     onSelectArticle={onSelectArticle}
 
                     onHeaderClick={this.onHeaderClick}
                 />
                 <ArticleBody
+                    id={id}
+
+                    editable={editable}
+
                     text={text}
                     editedText={editedText}
                     expanded={expanded}
@@ -68,10 +72,31 @@ export class Article extends React.Component {
                     onSaveText={onSaveText}
                     onChangeText={onChangeText}
                 />
-                <ArticleFooter selected={selected}/>
+                <ArticleFooter
+                    editable={editable}
+                    selected={selected}
+                    onCancelButtonClick={this.onCancelButtonClick}
+                    onEditButtonClick={this.onEditButtonClick}
+                />
             </div>
         )
     }
+
+    onEditButtonClick = () => {
+        this.setState({
+            ...this.state,
+            expanded: true,
+            editable: true,
+        });
+    };
+
+    onCancelButtonClick = () => {
+        this.setState({
+            ...this.state,
+            editable: false,
+        });
+        this.props.onCancelChanges(this.props.id);
+    };
 
     onHeaderClick = () => {
         this.setState({
@@ -98,5 +123,6 @@ Article.propTypes = {
     onChangeTitle: PropTypes.func.isRequired,
     onSaveTitle: PropTypes.func.isRequired,
 
+    onCancelChanges: PropTypes.func.isRequired,
     onSelectArticle: PropTypes.func.isRequired,
 };

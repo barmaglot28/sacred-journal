@@ -5,9 +5,10 @@
   "main": "/app/build/backend/app.js",
   "scripts": {
     "build": "webpack",
-    "dc:install": "docker-compose run web",
     "copy": "ncp ./src/server/views ./build/backend/views",
-    "start": "tsc && yarn run copy && node ./build/backend/app.js"
+    "dc:install": "docker-compose run web",
+    "dc:start": "tsc && yarn run copy && concurrently --kill-others \"tsc -w\" \"nodemon ./build/backend/app.js\"",
+    "start": "docker-compose up mongo web"
   },
   "author": "m.lozinsky",
   "license": "ISC",

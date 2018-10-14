@@ -3,8 +3,10 @@ import "./SigninForm.scss";
 import React from "react";
 import PropTypes from "prop-types";
 
-import {Input} from "../../common/components/Input";
-import {Button} from "../../common/components/Button";
+import {Input} from "../../common/components/input/Input";
+import {Button} from "../../common/components/button/Button";
+import {Alert} from "../../common/components/alert/Alert";
+import {resolveText} from "../../common/util/errorText";
 
 export class SigninForm extends React.Component {
     constructor(props) {
@@ -24,8 +26,11 @@ export class SigninForm extends React.Component {
 
     render() {
         const {
+            failed,
+            errorCode,
+            locked,
             login,
-            pass,
+            password,
         } = this.props;
 
         const {
@@ -35,16 +40,18 @@ export class SigninForm extends React.Component {
         return (
             <div id="signin-form" className={"wrapper-signin-form"}>
                 <div className={"wrapper-input-block"}>
+                    {failed && <Alert text={resolveText(errorCode)}/>}
                     <Input
                         value={login}
                         onChange={this.onLoginChange}
                     />
                     <Input
-                        value={pass}
+                        value={password}
                         onChange={this.onPassChange}
                     />
                     <Button
-                        className={`login-button ${visibleButton ? "visible" : ""}`}
+                        className={`login-button ${visibleButton && !locked ? "visible" : ""}`}
+                        onClick={this.onSignin}
                         label={"увійти"}
                     />
                 </div>
@@ -52,10 +59,19 @@ export class SigninForm extends React.Component {
         )
     }
 
+    onSignin = () => {
+        const {
+            password,
+            login,
+        } = this.props;
+
+        this.props.onSignin(login, password);
+    };
+
     onLoginChange = value => {
-        const pass = this.props.pass;
+        const password = this.props.password;
         this.setState({
-            visibleButton: !!(value && pass),
+            visibleButton: !!(value && password),
         });
 
         this.props.onChangeLogin(value);
@@ -72,9 +88,13 @@ export class SigninForm extends React.Component {
 }
 
 SigninForm.propTypes = {
+    failed: PropTypes.bool.isRequired,
+    locked: PropTypes.bool.isRequired,
+    errorCode: PropTypes.string.isRequired,
     login: PropTypes.string.isRequired,
-    pass: PropTypes.string.isRequired,
+    password: PropTypes.string.isRequired,
 
+    onSignin: PropTypes.func.isRequired,
     onChangeLogin: PropTypes.func.isRequired,
     onChangePass: PropTypes.func.isRequired,
 };

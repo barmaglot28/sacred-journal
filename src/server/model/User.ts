@@ -1,5 +1,14 @@
-import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
+import {
+    Column,
+    Entity,
+    getRepository,
+    OneToMany,
+    Repository,
+    ObjectID,
+    ObjectIdColumn
+} from "typeorm";
 import {Article} from "./Article";
+import {saltPassword} from "../util/hashingUtil";
 
 export interface IUser {
     login?: string;
@@ -8,8 +17,8 @@ export interface IUser {
 
 @Entity()
 export class User {
-    @PrimaryGeneratedColumn()
-    public id: string;
+    @ObjectIdColumn()
+    public id: ObjectID;
 
     @Column({type: "text", unique: true, nullable: false})
     public login: string;
@@ -23,5 +32,17 @@ export class User {
     constructor(options: IUser = {}) {
         this.login = options.login;
         this.pass = options.pass;
+    }
+
+    public static async seedDefaultUser(): Promise<void> {
+        const userRepo: Repository<User> = getRepository(User);
+        const user: User = new User({
+            login: "vovchok",
+            pass: saltPassword("ytysapapa"),
+        });
+
+        if (await userRepo.count({where: {username: user.login}}) !== 1) {
+            await userRepo.insert(user);
+        }
     }
 }

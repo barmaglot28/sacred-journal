@@ -3,8 +3,8 @@ import "./ArticleForm.scss";
 import React from "react";
 import PropTypes from "prop-types";
 
-import {ArticleActionMenu} from "./ArticleActionMenu";
-import {ArticleList} from "./ArticleList";
+import {ArticleActionMenu} from "./sidebar/ArticleActionMenu";
+import {ArticleList} from "./list/ArticleList";
 
 export class ArticleForm extends React.Component {
     render() {
@@ -17,6 +17,7 @@ export class ArticleForm extends React.Component {
             onChangeTitle,
             onCreateArticle,
             onSelectArticle,
+            onCancelChanges,
         } = this.props;
 
         return (
@@ -28,6 +29,7 @@ export class ArticleForm extends React.Component {
                 <ArticleList
                     articles={article.articles}
 
+                    onCancelChanges={onCancelChanges}
                     onSaveTitle={onSaveTitle}
                     onSaveText={onSaveText}
                     onChangeText={onChangeText}
@@ -42,6 +44,7 @@ export class ArticleForm extends React.Component {
 ArticleForm.propTypes = {
     article: PropTypes.object.isRequired,
 
+    onCancelChanges: PropTypes.func.isRequired,
     onSaveText: PropTypes.func.isRequired,
     onSaveTitle: PropTypes.func.isRequired,
     onChangeText: PropTypes.func.isRequired,

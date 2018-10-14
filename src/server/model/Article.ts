@@ -1,4 +1,4 @@
-import {Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn} from "typeorm";
+import {Column, Entity, JoinColumn, ManyToOne, ObjectIdColumn, ObjectID} from "typeorm";
 import {User} from "./User";
 
 export interface IArticle {
@@ -9,8 +9,8 @@ export interface IArticle {
 
 @Entity()
 export class Article {
-    @PrimaryGeneratedColumn()
-    public id: string;
+    @ObjectIdColumn()
+    public id: ObjectID;
 
     @Column("text")
     public title: string;
